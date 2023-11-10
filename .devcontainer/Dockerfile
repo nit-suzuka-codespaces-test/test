@@ -17,7 +17,7 @@ RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
- ENV DISPLAY :0
+ENV DISPLAY :0
 
 RUN apt-get update --fix-missing \
     && apt-get install -y libsfml-dev xauth \
