@@ -19,7 +19,7 @@ RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
 
 ENV DISPLAY :0
 
-RUN apt-get update --fix-missing \
+RUN apt-get update \
     && apt-get install -y libsfml-dev xauth \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
