@@ -18,6 +18,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "sudo sed -ie 's/^#X11DisplayOffset 10/X11DisplayOffset 0/' /etc/ssh/sshd_config && sudo service ssh restart",
+	"postAttachCommand": "if [ $CODESPACES ]; then export DISPLAY=localhost:0; else export DISPLAY=host.docker.internal:0; fi",
 
 	// Configure tool-specific properties.
 	"customizations": {
