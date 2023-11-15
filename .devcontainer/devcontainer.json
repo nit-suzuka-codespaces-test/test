@@ -17,7 +17,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo sed -ie 's/^#X11DisplayOffset 10/X11DisplayOffset 0/' /etc/ssh/sshd_config && sudo service ssh restart",
+	"postCreateCommand": "if [ $CODESPACES ]; then sudo sed -ie 's/^#X11DisplayOffset 10/X11DisplayOffset 0/' /etc/ssh/sshd_config && sudo service ssh restart;fi",
 	"postAttachCommand": "if [ $CODESPACES ]; then export DISPLAY=localhost:0;fi",
 
 	// Configure tool-specific properties.
