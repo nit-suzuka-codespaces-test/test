@@ -1,10 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"name": "C++",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"name": "Default Linux Universal",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -24,10 +23,12 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"github.classroom",
 				"donjayamanne.githistory",
 				"yzhang.markdown-all-in-one",
-				"shd101wyy.markdown-preview-enhanced"
+				"shd101wyy.markdown-preview-enhanced",
+				"ms-vscode.cpptools-extension-pack",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
 			]
 		}
 	}

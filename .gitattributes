@@ -1,0 +1,53 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+*.c text
+*.cpp text
+*.h text
+*.hpp text
+
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.o binary
+*.a binary
+*.lib binary
+*.obj binary
+*.pdb binary
+
+*.gif binary
+*.jpeg binary
+*.png binary
+*.jpg binary
+*.bmp binary
+*.ico binary
+*.tiff binary
+*.tif binary
+*.svg binary
+*.svgz binary
+*.pdf binary
+*.ps binary
+*.eps binary
+
+*.gz binary
+*.jar binary
+*.zip binary
+*.tar binary
+*.7z binary
+*.bz2 binary
+
+*.mp3 binary
+*.ogg binary
+*.flac binary
+*.wav binary
+*.aiff binary
+*.aif binary
+*.m4a binary
+*.wma binary
+
+
+
+
