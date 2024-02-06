@@ -42,4 +42,6 @@
     setx DISPLAY localhost:0.0
     gh cs ssh -- -XY
     ```
+
+1. ssh接続しているコマンドプロンプトで、（makeやc++などで）ビルドして実行
    
