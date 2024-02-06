@@ -5,4 +5,5 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-
+COPY display.sh /etc/profile.d/display.sh
+RUN chmod +x /etc/profile.d/display.sh
