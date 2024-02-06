@@ -18,8 +18,8 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "if [ $CODESPACES ]; then sudo sed -ie 's/^#X11DisplayOffset 10/X11DisplayOffset 0/' /etc/ssh/sshd_config && sudo service ssh restart;fi",
-	"postStartCommand": "",
+	//"postCreateCommand": "if [ $CODESPACES ]; then sudo sed -ie 's/^#X11DisplayOffset 10/X11DisplayOffset 0/' /etc/ssh/sshd_config && sudo service ssh restart;fi",
+	"postStartCommand": ".devcontainer/display.sh",
 
 	// Configure tool-specific properties.
 	"customizations": {
