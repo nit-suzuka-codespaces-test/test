@@ -2,10 +2,10 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
 	"name": "SFML",
-	// "build": {
-	// 	"dockerfile": "Dockerfile"
-	// },
-	"image": "ghcr.io/nit-suzuka-codespaces-test/test/sfml:latest",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	// "image": "ghcr.io/nit-suzuka-codespaces-test/test/sfml:latest",
 	
 	"customizations": {
 		"vscode": {
