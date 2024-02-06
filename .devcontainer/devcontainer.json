@@ -1,27 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"name": "Default Linux Universal",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	//"image": "ghcr.io/nit-suzuka-codespaces-test/test/sfml:latest",
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {
-	// 	"ghcr.io/devcontainers/features/sshd:1": {
-	// 		"version": "latest"
-	// 	}
-	// },	
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	//"postCreateCommand": "if [ $CODESPACES ]; then sudo sed -ie 's/^#X11DisplayOffset 10/X11DisplayOffset 0/' /etc/ssh/sshd_config && sudo service ssh restart;fi",
-	//"postStartCommand": "source .devcontainer/display.sh",
-
-	// Configure tool-specific properties.
+	"name": "SFML",
+	// "build": {
+	// 	"dockerfile": "Dockerfile"
+	// },
+	"image": "ghcr.io/nit-suzuka-codespaces-test/test/sfml:latest",
+	
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -34,9 +19,4 @@
 			]
 		}
 	}
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
-
-	
 }
