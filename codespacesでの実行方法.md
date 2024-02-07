@@ -15,9 +15,9 @@
    
 1. VcXsrvを実行（ショートカットXLaunchをダブルクリック）
     
-1. コマンドプロンプトでgithubにログイン
+1. （初回のみ）コマンドプロンプトでgithubにログイン
     ```shell
-    gh auth login
+    gh auth login -s codespace
     ```
    - （初回のみ）表示された質問に以下で回答
     ```shell
@@ -31,17 +31,28 @@
       SSH
     ```
     ```shell
+    ? Authenticate Git with your GitHub credentials? (Y/n) Y
+    ```
+    ```shell
     ? How would you like to authenticate GitHub CLI?  [Use arrows to move, type to filter]
     > Login with a web browser
       Paste an authentication token
     ```
     - ブラウザが開くので認証を行う
+    ```
+    ! First copy your one-time code: XXXX-XXXX
+    ``` 
+    - ブラウザ認証時にMachine Codeの入力画面が表示されたら、コマンドプロンプトに表示されたコード（上記の XXXX-XXXX）を入力
 
 1. コマンドプロンプトでcodespacesにssh接続
     ```shell
-    setx DISPLAY localhost:0.0
+    set DISPLAY=localhost:0.0
     gh cs ssh -- -XY
     ```
-
-1. ssh接続しているコマンドプロンプトで、（makeやc++などで）ビルドして実行
+    - 表示されたcodespaceを選択する
+    ```shell
+    ? Choose codespace:  [Use arrows to move, type to filter]
+    > [リポジトリ名] (main): [codespace名]
+    ```
+1. ssh接続しているコマンドプロンプトで、ビルド（makeやc++など）して実行
    
